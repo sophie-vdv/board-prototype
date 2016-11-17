@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/main.min.css">
+<body>
+
+<div class="content">
+    <div class="component announcement">
+        <h2>Announcement</h2>
+        <span class="message text">Help yourself with some beers on the groundfloor</span>
+    </div>
+
+    <div class="row">
+        <div class="col-1-4">
+            <div class="component timezone">
+                <div id="london_date"></div>
+                <div id="london_time"></div>
+
+                <div class="time-sets">
+                    <div class="time-set">
+                        <div class="city-name">Seattle</div>
+                        <div class="time" id="seattle_time"></div>
+                    </div>
+                    <div class="time-set">
+                        <div class="city-name">Brussels</div>
+                        <div class="time" id="brussels_time"></div>
+                    </div>
+                    <div class="time-set">
+                        <div class="city-name">Tokyo</div>
+                        <div class="time" id="tokyo_time"></div>
+                    </div>
+                    <div class="time-set">
+                        <div class="city-name">Sydney</div>
+                        <div class="time" id="sydney_time"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1-2">
+            <div class="component weather">
+                <div class="degree-zero"></div>
+                <div id="weather"></div>
+            </div>
+        </div>
+
+        <div class="col-1-4">
+            <div class="component timezone">
+                <h2>Commit</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1-3">
+            <div class="component timezone">
+                <h2>Meeting update</h2>
+            </div>
+        </div>
+
+        <div class="col-1-3">
+            <div class="component timezone">
+                <h2>Music</h2>
+            </div>
+        </div>
+
+        <div class="col-1-3">
+            <div class="component timezone">
+                <h2>Twitter</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="scripts/jquery-1.11.3.min.js"></script>
+<script src="scripts/moment.js"></script>
+<script src="scripts/moment-timezone.js"></script>
+<script src="scripts/jquery.simpleWeather.min.js"></script>
+<script src="js/main.min.js"></script>
+</html>

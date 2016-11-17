@@ -8,7 +8,7 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest",
+    "grunt-contrib-watch": "^1.0.0",
     "jshint-stylish": "latest"
   }
 }

@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
         pkg : grunt.file.readJSON('package.json'),
@@ -62,8 +63,14 @@ module.exports = function (grunt) {
                     keepalive : true
                 }
             }
-        }
+        },
+        watch: {
+            scripts: {
+                files: ['*/**/*/*'],
+                tasks: ['default']
+            }
+        },
     });
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'less', 'connect:server', 'watch']);
+    grunt.registerTask('default', ['uglify', 'less', 'cssmin:build', 'connect:server', 'watch']);
 };

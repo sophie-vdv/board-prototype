@@ -1,0 +1,41 @@
+.component.timezone {
+  #london_time {
+    font-size     : 60px;
+    margin-bottom : 40px;
+  }
+
+  #london_date {
+    font-size     : 24px;
+    margin-top    : 10px;
+    margin-bottom : 20px;
+  }
+
+  .time-sets {
+    border-top  : 1px solid #cecece;
+    padding-top : 40px;
+
+    .time-set {
+      width        : 50%;
+      margin-right : -2px;
+      display      : inline-block;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-top : 30px;
+      }
+
+      .time {
+        font-size : 24px;
+      }
+
+      .city-name {
+        font-size      : 14px;
+        color          : #00bfd5;
+        text-transform : uppercase;
+        font-weight    : 900;
+        margin-bottom  : 10px;
+      }
+    }
+  }
+}
+

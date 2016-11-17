@@ -1,0 +1,81 @@
+.component.weather {
+  position : relative;
+
+  .degree-zero {
+    height           : 1px;
+    max-width        : 600px;
+    width            : 100%;
+    background-color : rgba(191, 213, 231, 0.4);
+    top              : 60.5%;
+    position         : absolute;
+  }
+
+  i {
+    color          : #00bfd5;
+    font-family    : weather;
+    font-size      : 80px;
+    font-weight    : normal;
+    font-style     : normal;
+    line-height    : 1.0;
+    text-transform : none;
+    position       : absolute;
+    top            : 20px;
+    right          : 40px;
+  }
+
+  #weather {
+    width     : 100%;
+    max-width : 600px;
+
+    .current {
+      font-size : 32px;
+    }
+
+    .current-description {
+      font-size  : 24px;
+      margin-top : 8px;
+    }
+
+    .city {
+      position        : absolute;
+      bottom          : 20px;
+      right           : 20px;
+      text-decoration : underline;
+    }
+
+    .days {
+      width      : 10%;
+      text-align : center;
+      height     : 200px;
+      display    : inline-block;
+      margin-top : 6%;
+
+      .max {
+        height           : 180px;
+        background-color : rgba(191, 213, 231, 0.2);
+        width            : 10px;
+        border-radius    : 20px;
+        position         : relative;
+        margin           : 12px auto;
+
+        .temp {
+          width    : 10px;
+          position : absolute;
+
+          &.positive-value {
+            background-color        : #00bfd5;
+            bottom                  : 50%;
+            border-top-left-radius  : 20px;
+            border-top-right-radius : 20px;
+          }
+          &.negative-value {
+            background-color           : #94c1e8;
+            top                        : 50%;
+            border-bottom-left-radius  : 20px;
+            border-bottom-right-radius : 20px;
+          }
+        }
+      }
+    }
+  }
+}
