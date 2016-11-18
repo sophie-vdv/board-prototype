@@ -427,7 +427,7 @@ body {
 }
 .content {
   width: calc(100vw - 120px);
-  height: calc(100vh - 200px);
+  height: auto;
   margin: 100px auto;
 }
 @media only screen and (max-width: 850px) {
