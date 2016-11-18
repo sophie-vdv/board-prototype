@@ -8,11 +8,24 @@ html, body {
   width  : ~"calc(100vw - 120px)";
   height : ~"calc(100vh - 200px)";
   margin : 100px auto;
+
+  @media @small {
+    width  : ~"calc(100vw - 40px)";
+    height : ~"calc(100vh - 40px)";
+    margin : 20px auto;
+  }
+
+  @media @medium {
+    width  : ~"calc(100vw - 40px)";
+    height : ~"calc(100vh - 40px)";
+    margin : 20px auto;
+  }
 }
 
 .text {
   font-size   : 18px;
   font-family : "SF-thin";
+  line-height : 22px;
 }
 
 h2 {
@@ -25,15 +38,7 @@ h2 {
   border           : 1px solid #D7D7D7;
   background-color : #F4F7F8;
   padding          : 20px;
-  margin-bottom    : 20px;
 }
 
-.component.announcement {
-  height      : 10%;
-  display     : flex;
-  align-items : center;
-  .message {
-    padding-left : 40px;
-  }
-}
+
 

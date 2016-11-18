@@ -27,7 +27,6 @@ $(document).ready(function() {
         success: function(weather) {
             html = '<i class="icon-'+weather.code+'"></i>';
             html += '<div class="current">'+weather.temp+'&deg;'+weather.units.temp+'</div>';
-            html += '<div class="city">'+weather.city+'</div>';
             html += '<div class="current-description">'+weather.currently+'</div>';
 
             for(var i=0;i<weather.forecast.length;i++) {
@@ -35,7 +34,7 @@ $(document).ready(function() {
                 var highTemp = weather.forecast[i].high;
                 var weekDays = weather.forecast[i].day;
 
-                html += '<div class="days">'+highTemp+'<div class="max">'+'<div class="temp" data-height="'+highTemp+'"></div>'+'</div>'+weekDays+'</div>';
+                html += '<div class="days">'+highTemp+'<div class="max">'+'<div class="temp" data-height="'+highTemp+'"></div>'+'<div class="degree-zero"></div>'+'</div>'+weekDays+'</div>';
             }
 
             $("#weather").html(html);

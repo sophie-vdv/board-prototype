@@ -1,13 +1,17 @@
 .component.weather {
-  position : relative;
+  position      : relative;
+  margin-bottom : 20px;
+
+  @media @small {
+    margin-bottom : 0;
+  }
 
   .degree-zero {
-    height           : 1px;
-    max-width        : 600px;
-    width            : 100%;
-    background-color : rgba(191, 213, 231, 0.4);
-    top              : 60.5%;
-    position         : absolute;
+    position   : absolute;
+    height     : 2px;
+    width      : 100%;
+    background : #0058b5;
+    top        : 50%;
   }
 
   i {
@@ -21,6 +25,10 @@
     position       : absolute;
     top            : 20px;
     right          : 40px;
+
+    @media @small {
+      right : 20px;
+    }
   }
 
   #weather {
@@ -36,19 +44,17 @@
       margin-top : 8px;
     }
 
-    .city {
-      position        : absolute;
-      bottom          : 20px;
-      right           : 20px;
-      text-decoration : underline;
-    }
-
     .days {
       width      : 10%;
       text-align : center;
       height     : 200px;
       display    : inline-block;
       margin-top : 6%;
+
+
+      @media @small {
+        display : none;
+      }
 
       .max {
         height           : 180px;
@@ -57,6 +63,10 @@
         border-radius    : 20px;
         position         : relative;
         margin           : 12px auto;
+
+        @media @small {
+          display : none;
+        }
 
         .temp {
           width    : 10px;
@@ -75,6 +85,12 @@
             border-bottom-right-radius : 20px;
           }
         }
+      }
+    }
+
+    .days:first-child {
+      &:before {
+        content : "helllo";
       }
     }
   }

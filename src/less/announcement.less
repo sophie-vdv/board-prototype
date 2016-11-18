@@ -1,0 +1,23 @@
+.component.announcement {
+  height      : 10%;
+  display     : flex;
+  align-items : center;
+  .message {
+    padding-left : 40px;
+  }
+
+  @media @small {
+    display : block;
+    height  : auto;
+
+    .message {
+      padding-left : 0px;
+      display      : block;
+    }
+
+    h2 {
+      display       : block;
+      margin-bottom : 12px;
+    }
+  }
+}
