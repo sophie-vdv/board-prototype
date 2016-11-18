@@ -560,7 +560,6 @@ h2 {
 }
 .component.weather #weather {
   width: 100%;
-  max-width: 600px;
 }
 .component.weather #weather .current {
   font-size: 32px;
@@ -615,4 +614,12 @@ h2 {
 }
 .component.commit {
   display: inline-block;
+}
+.component.twitter #feed-twitter {
+  max-height: 400px;
+  overflow: scroll;
+  height: 100%;
+}
+a.twitter-timeline {
+  background-color: transparent;
 }

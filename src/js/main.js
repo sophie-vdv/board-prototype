@@ -56,3 +56,14 @@ $(document).ready(function() {
     });
 
 });
+
+
+var scrollDistancePerAnimationFrame = Math.ceil(0.001);
+var wrapper = document.getElementById('feed-twitter');
+
+autoScroll(wrapper);
+function autoScroll(element){
+    if (element.scrollTop < element.scrollHeight)
+        window.requestAnimationFrame(autoScroll.bind(null,element));
+    element.scrollTop += scrollDistancePerAnimationFrame;
+}
