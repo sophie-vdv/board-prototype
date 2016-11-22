@@ -57,7 +57,26 @@ $(document).ready(function() {
 
 });
 
+$(document).ready(function() {
+    getData();
+});
 
-function receiveData(data) {
-    $('.announcement .message').html(data.data);
+
+function getData() {
+    $.getJSON('https://new.thisplace.com/sophie_slack_test/proxy.php?file=data.json', function(data){
+        console.info(data.text);
+        $('#message').html(data.text);
+    });
 }
+
+var previous = null;
+var current = null;
+setInterval(function() {
+    $.getJSON('https://new.thisplace.com/sophie_slack_test/proxy.php?file=data.json', function(json) {
+        current = JSON.stringify(json);
+        if (previous && current && previous !== current) {
+            getData();
+        }
+        previous = current;
+    });
+}, 2000);

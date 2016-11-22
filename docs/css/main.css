@@ -301,7 +301,7 @@ table {
   display: flex;
   align-items: center;
 }
-.component.announcement .message {
+.component.announcement #message {
   padding-left: 40px;
 }
 @media only screen and (max-width: 850px) {
@@ -309,7 +309,7 @@ table {
     display: block;
     height: auto;
   }
-  .component.announcement .message {
+  .component.announcement #message {
     padding-left: 0px;
     display: block;
   }
