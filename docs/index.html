@@ -80,5 +80,15 @@
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="js/main.min.js"></script>
 <script src="https://new.thisplace.com/sophie_slack_test/data.js"></script>
+<script>
+    function getData() {
+        $.getJSON('https://new.thisplace.com/sophie_slack_test/proxy.php?file=data.json', function(data){
+            console.info(data.text);
+            $('#message').html(data.text);
+        });
+    }
+
+    setInterval(getData, 3000);
+</script>
 </html>
 
