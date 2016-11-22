@@ -58,7 +58,6 @@ $(document).ready(function() {
 });
 
 
-
-$.getJSON('http://new.thisplace.com/sophie_slack_test/data.json', function(data) {
-    console.info(data);
-});
+function receiveData(data) {
+    $('.announcement .message').html(data.data);
+}
