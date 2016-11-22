@@ -62,5 +62,12 @@ $(document).ready(function() {
 });
 
 
+function getData() {
+    $.getJSON('https://new.thisplace.com/sophie_slack_test/proxy.php?file=data.json', function(data){
+        $('#message').html(data.text);
+    });
+}
+
+setInterval(getData, 3000);
 
 
