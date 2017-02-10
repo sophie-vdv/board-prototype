@@ -65,9 +65,27 @@ $(document).ready(function() {
 function getData() {
     $.getJSON('https://new.thisplace.com/sophie_slack_test/proxy.php?file=data.json', function(data){
         $('#message').html(data.text);
+        sendToSlack();
     });
 }
 
 setInterval(getData, 3000);
+
+function sendToSlack(){
+    var settings ={
+        url: "https://hooks.slack.com/services/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",
+        method: "POST",
+        dataType: "application/x-www-form-urlencoded",
+        data: {
+            "payload": JSON.stringify({text: $("#message").val()})
+        }
+    }
+
+    $.ajax(settings).done(function (response){
+        console.log(response);
+    })
+}
+
+
 
 
