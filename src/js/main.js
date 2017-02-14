@@ -57,34 +57,18 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function() {
-    getData();
+var firebaseConfig = {
+    apiKey: "AIzaSyDlRhGCP15QwZuIqSnCP1_qnDl9btesqtM",
+    databaseURL: "https://this-dashboard.firebaseio.com",
+    storageBucket: "this-dashboard"
+};
+firebase.initializeApp(firebaseConfig);
+
+var slackRef = firebase.database().ref('slack');
+
+slackRef.limitToLast(1).on('child_added', function(snapshot) {
+    $('#message').html(snapshot.val().text);
 });
-
-
-function getData() {
-    $.getJSON('https://new.thisplace.com/sophie_slack_test/proxy.php?file=data.json', function(data){
-        $('#message').html(data.text);
-        sendToSlack();
-    });
-}
-
-setInterval(getData, 3000);
-
-function sendToSlack(){
-    var settings ={
-        url: "https://hooks.zapier.com/hooks/catch/1997005/m6f7t5/",
-        method: "POST",
-        dataType: "application/x-www-form-urlencoded",
-        data: {
-            "payload": JSON.stringify({text: $("#message").val()})
-        }
-    }
-
-    $.ajax(settings).done(function (response){
-        console.log(response);
-    })
-}
 
 
 
