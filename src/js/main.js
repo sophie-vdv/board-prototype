@@ -73,7 +73,7 @@ setInterval(getData, 3000);
 
 function sendToSlack(){
     var settings ={
-        url: "https://hooks.slack.com/services/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",
+        url: "https://hooks.zapier.com/hooks/catch/1997005/m6f7t5/",
         method: "POST",
         dataType: "application/x-www-form-urlencoded",
         data: {
